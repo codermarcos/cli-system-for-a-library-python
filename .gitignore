@@ -1,0 +1,6 @@
+# PYTHON
+__pycache__/
+.mypy_cache/
+
+# SQLITE
+*.db
