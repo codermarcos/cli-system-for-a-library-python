@@ -15,8 +15,6 @@ LEND_BOOK_ASCII_ART = """
 [bright_black]Preencha os campos a seguir ou precione[/bright_black] [bold]esc[/bold] [bright_black]para voltar[/bright_black]
 """
 
-from book import Book
-
 
 class BookSearchForLend(Search):
     def __init__(self, on_back, on_select):
