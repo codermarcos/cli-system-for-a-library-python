@@ -23,7 +23,7 @@ class Menu(Console):
     def get_options(self):
         pass
 
-    def on_key_press(self, event):
+    def __on_key_press(self, event):
         if event.name == "enter":
             self.__select(self.selected_index)
         if event.name == "down" or event.name == "up":
@@ -33,7 +33,7 @@ class Menu(Console):
 
     def run(self):
         off_press = keyboard.on_press(
-            lambda event: self.on_key_press(event), suppress=True
+            lambda event: self.__on_key_press(event), suppress=True
         )
 
         self.handler_to_run = None

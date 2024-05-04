@@ -21,7 +21,7 @@ class Search(Console):
 
         self.selected_index = 0 if selection else None
 
-        self.run()
+        self.__run()
 
     @abstractmethod
     def on_back(self):
@@ -39,7 +39,7 @@ class Search(Console):
     def on_select(self, row):
         pass
 
-    def on_key_press(self, event):
+    def __on_key_press(self, event):
         if event.name == "esc":
             self.handler_to_run = self.on_back
             self.running = False
@@ -62,9 +62,9 @@ class Search(Console):
                 self.search_text = new_text
                 self.__render_search()
 
-    def run(self):
+    def __run(self):
         off_press = keyboard.on_press(
-            lambda event: self.on_key_press(event), suppress=True
+            lambda event: self.__on_key_press(event), suppress=True
         )
 
         self.handler_to_run = None
