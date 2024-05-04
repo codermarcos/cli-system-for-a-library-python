@@ -3,7 +3,6 @@ import time
 from abc import abstractmethod
 
 import keyboard
-from cli.keyboard_extends import KeyboardExtends
 from cli.prompts.error import NUMERIC_FIELD, REQUIRED_FIELD, Error
 from rich.console import Console
 from rich.prompt import Prompt

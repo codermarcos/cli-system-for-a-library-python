@@ -1,11 +1,5 @@
 from book import Book
-from cli.prompts.error import (
-    BIGER_THAN,
-    LESS_THAN,
-    NUMERIC_FIELD,
-    REQUIRED_FIELD,
-    Error,
-)
+from cli.prompts.error import BIGER_THAN, LESS_THAN, Error
 from cli.prompts.form import Form
 
 NEW_BOOK_ASCII_ART = """
