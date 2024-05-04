@@ -15,8 +15,6 @@ class NewBook(Form):
     def __init__(self, on_back):
         super().__init__(NEW_BOOK_ASCII_ART)
 
-        self.data = Book()
-
         self.on_back = on_back
 
         self.request_title()
@@ -60,5 +58,5 @@ class NewBook(Form):
             self.request_copies()
 
     def on_save(self):
-        self.data.save(self.form_anwsers)
+        Book.save(self.form_anwsers)
         self.sucess_log("Livro cadastrado com sucesso!")

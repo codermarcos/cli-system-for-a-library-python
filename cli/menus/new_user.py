@@ -14,8 +14,6 @@ class NewUser(Form):
     def __init__(self, on_back):
         super().__init__(NEW_USER_ASCII_ART)
 
-        self.data = User()
-
         self.on_back = on_back
 
         self.request_name()
@@ -36,5 +34,5 @@ class NewUser(Form):
         self.is_numeric(field, self.request_contact)
 
     def on_save(self):
-        self.data.save(self.form_anwsers)
+        User.save(self.form_anwsers)
         self.sucess_log("Usúario cadastrado com sucesso!")
